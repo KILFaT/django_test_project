@@ -31,6 +31,6 @@ from ask.qa import views
 # ]
 
 urlpatterns = [
-    url(r'^', include('qa.urls')),
+    url(r'^', views.test),
     url(r'^admin/', admin.site.urls),
 ]
