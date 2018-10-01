@@ -14,9 +14,11 @@ RUN apt-get --assume-yes install nginx
 
 RUN apt-get --assume-yes install gunicorn
 
-#RUN apt-get --assume-yes install python3-pip
+RUN apt-get --assume-yes install python3-pip
 
-#RUN pip3 install gunicorn
+RUN pip3 install gunicorn
+
+RUN pip3 install django
 
 RUN ./init.sh
 
