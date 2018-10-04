@@ -18,6 +18,9 @@ sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test-wsgi
 sudo ln -sf /home/box/web/etc/django_gunicorn.conf /etc/gunicorn.d/test-django
 sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql start
-mysql -uroot -e "create database ..."
+mysql -uroot -e "CREATE DATABASE qabase;"
+mysql -uroot -e "CREATE USER 'qauser'@'localhost' IDENTIFIED BY '123456';"
+mysql -uroot -e "GRANT ALL ON qabase.* TO 'qauser'@'localhost';"
 
 echo "INIT DONE!"
+
