@@ -1,5 +1,7 @@
 from django.conf.urls import url
 
+from django.http import HttpResponseRedirect
+
 from .views import test
 
 urlpatterns = [

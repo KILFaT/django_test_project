@@ -17,5 +17,7 @@ sudo /etc/init.d/nginx restart
 sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test-wsgi
 sudo ln -sf /home/box/web/etc/django_gunicorn.conf /etc/gunicorn.d/test-django
 sudo /etc/init.d/gunicorn restart
+sudo /etc/init.d/mysql start
+mysql -uroot -e "create database ..."
 
 echo "INIT DONE!"
