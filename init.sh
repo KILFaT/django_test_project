@@ -21,6 +21,13 @@ sudo /etc/init.d/mysql start
 mysql -uroot -e "CREATE DATABASE qabase;"
 mysql -uroot -e "CREATE USER 'qauser'@'localhost' IDENTIFIED BY '123456';"
 mysql -uroot -e "GRANT ALL ON qabase.* TO 'qauser'@'localhost';"
-
+cd ask/ask
+./manage.py makemigrations qa
+./manage.py migrate
 echo "INIT DONE!"
+
+# pacman -Syy && pacman -Syu
+# sudo pacman -S mysql
+#  pip install mysqlclient
+
 

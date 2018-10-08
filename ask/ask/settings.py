@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'qa',
+    'qa.apps.QaConfig',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +80,10 @@ DATABASES = {
         'HOST': '',
         'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # Password validation
